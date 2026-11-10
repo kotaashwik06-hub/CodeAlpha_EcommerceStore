@@ -96,3 +96,24 @@ Developed as part of the CodeAlpha Internship.
 
 ## Repository
 https://github.com/kotaashwik06-hub/CodeAlpha_EcommerceStore
+
+
+## Project Screenshots
+
+### 1. Homepage
+![ShopEase Homepage](ShopEase_Project_Screenshots/01-homepage.png)
+
+### 2. Shopping Cart
+![Shopping Cart](ShopEase_Project_Screenshots/02-cart.png)
+
+### 3. Login
+![Login Page](ShopEase_Project_Screenshots/03-login.png)
+
+### 4. Registration
+![Registration Page](ShopEase_Project_Screenshots/04-register.png)
+
+### 5. Checkout
+![Checkout Page](ShopEase_Project_Screenshots/05-checkout.png)
+
+### 6. My Orders
+![My Orders](ShopEase_Project_Screenshots/06-my-orders.png)
