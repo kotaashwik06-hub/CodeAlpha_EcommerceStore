@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEase - Online Shopping</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <h1 class="logo">ShopEase</h1>
+
+            <ul class="nav-links">
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#products">Products</a></li>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="my-orders.html">My Orders</a></li>
+
+                <li id="guestLinks">
+                    <a href="login.html">Login</a>
+                </li>
+
+                <li id="registerLink">
+                    <a href="register.html">Register</a>
+                </li>
+
+                <li id="userInfo" style="display: none;">
+                    Welcome, <span id="userName"></span>
+                </li>
+
+                <li id="logoutLink" style="display: none;">
+                    <a href="#" id="logoutButton">Logout</a>
+                </li>
+
+            </ul>
+
+            <!-- Search and Cart -->
+            <div class="nav-actions">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search products..."
+                >
+
+                <a href="cart.html" class="cart-link">
+                    🛒 Cart (<span id="cartCount">0</span>)
+                </a>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h2>Welcome to ShopEase</h2>
+
+            <p>Discover amazing products at the best prices.</p>
+
+            <a href="#products" class="shop-btn">
+                Shop Now
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+
+        <h2>Our Products</h2>
+
+        <p>Explore our latest collection</p>
+
+        <div class="product-container" id="productContainer">
+
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+
+        <h2>About ShopEase</h2>
+
+        <p>
+            ShopEase is an online shopping platform where
+            customers can explore products, add items to
+            their shopping cart and place orders easily.
+        </p>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 ShopEase. All Rights Reserved.</p>
+
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="script.js"></script>
+    <script src="session.js"></script>
+
+</body>
+</html>

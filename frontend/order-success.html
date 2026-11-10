@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order Successful - ShopEase</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="success-container">
+
+        <div class="success-card">
+
+            <div class="success-icon">✓</div>
+
+            <h1>Order Placed Successfully!</h1>
+
+            <p>Thank you for shopping with ShopEase.</p>
+
+            <h3>Your Order ID:</h3>
+
+            <p id="orderId">Loading...</p>
+
+            <h3>Customer Name:</h3>
+
+            <p id="customerName"></p>
+
+            <h3>Order Amount:</h3>
+
+            <p id="orderAmount"></p>
+
+            <h3>Order Status:</h3>
+
+            <p id="orderStatus"></p>
+
+            <a href="index.html" class="shop-btn">
+                Continue Shopping
+            </a>
+
+        </div>
+
+    </main>
+
+    <script>
+
+        // Get latest order saved after MongoDB confirmation
+        const lastOrderData =
+            localStorage.getItem("lastOrder");
+
+        if (lastOrderData) {
+
+            try {
+
+                const order = JSON.parse(lastOrderData);
+
+                document.getElementById("orderId").textContent =
+                    order.orderId || "Not available";
+
+                document.getElementById("customerName").textContent =
+                    order.customer?.name || "Not available";
+
+                document.getElementById("orderAmount").textContent =
+                    "Total Amount: ₹" + order.total;
+
+                document.getElementById("orderStatus").textContent =
+                    order.status || "Placed";
+
+            } catch (error) {
+
+                document.getElementById("orderId").textContent =
+                    "Unable to load order details.";
+
+                console.error("Order display error:", error);
+
+            }
+
+        } else {
+
+            document.getElementById("orderId").textContent =
+                "No recent order found.";
+
+            document.getElementById("customerName").textContent =
+                "-";
+
+            document.getElementById("orderAmount").textContent =
+                "-";
+
+            document.getElementById("orderStatus").textContent =
+                "-";
+
+        }
+
+    </script>
+
+</body>
+</html>
